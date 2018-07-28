@@ -100,7 +100,7 @@ def ValidateTimeSeriesKeys(context,func):
     
     if func == "Weekly Adjusted Time Series" :
        #print ("this is firts->",dictfirstelem)
-       time_dict = raw_data[func]
+       time_dict = context.raw_data[func]
        y = time_dict.keys()[0]
        #time_dict[y]
        #listdata = list(raw_data[func].keys())[0]
@@ -145,39 +145,50 @@ def ValidateTimeSeriesDataNotNone(context):
                 raise Exception("Blank values found in datapoint")
 
 
+"""
+@then(u'Test data validation should pass')
+def ValidateTestData(context):
+    ''' Read mocktest data and match with the response JSON data recieved'''
+    try:
+        context.WeeklyAdjustedTimeSeries = mock_data.WeeklyAdjustedTimeSeries
+        raw_response = {}
+        #testdatakeys= []
+        #key = '1. open'
+        context.raw_response = context.raw_data['Weekly Adjusted Time Series']
+        #print (raw_response)
+        context.testdatakeys = context.WeeklyAdjustedTimeSeries.keys()
+        print (testdatakeys)
+        x = list(testdatakeys)[0]
+        print (x)
+        for key in list(testdatakeys):
+            #print (WeeklyAdjustedTimeSeries[keys])
+            #print ("Raw_response:->**",raw_response[keys])
+            if context.WeeklyAdjustedTimeSeries[key] != context.raw_response[key]:
+                assert False
+        #print (type(WeeklyAdjustedTimeSeries[keys].values()))
+    except Exception as e:
+           raise Exception("Response and Mockdata not matched",e)
+	   print (e)
+"""
 
 @then(u'Test data validation should pass')
 def ValidateTestData(context):
     ''' Read mocktest data and match with the response JSON data recieved'''
     try:
         WeeklyAdjustedTimeSeries = mock_data.WeeklyAdjustedTimeSeries
-        raw_response = context.raw_data['Weekly Adjusted Time Series']
+        response_data = context.raw_data['Weekly Adjusted Time Series']
         testdatakeys = WeeklyAdjustedTimeSeries.keys()
-        print (testdatakeys)
-        x = list(testdatakeys)[0]
-        print (x)
+        #print (testdatakeys)
+        #x = list(testdatakeys)[0]
+        #print (x)
         for keys in list(testdatakeys):
-            #print (WeeklyAdjustedTimeSeries[keys])
-            #print ("Raw_response:->**",raw_response[keys])
-            if WeeklyAdjustedTimeSeries[keys] != raw_response[keys]:
+            print (WeeklyAdjustedTimeSeries[keys])
+            print ("Raw_response:->**",response_data[keys])
+            if WeeklyAdjustedTimeSeries[keys] != response_data[keys]:
                 assert False
         #print (type(WeeklyAdjustedTimeSeries[keys].values()))
     except Exception as e:
-           raise Exception("Response and Mockdata not matched",raw_response[keys],WeeklyAdjustedTimeSeries[keys])
-	
+           raise Exception("Response and Mockdata not matched",e)
 
 
-#d, status, headers = GetRequest()
 
-#ValidateTestData(mock_data.WeeklyAdjustedTimeSeries,d['Weekly Adjusted Time Series'])
-# x.request()
-#d, status, headers = GetRequest()
-#print (d.keys())
-#print (d['Meta Data'])
-# print d
-#print (type(d))
-#LenghtResponse(d)
-# ValidateWeeklyTimeSeries(d,vars_file.TIME_SERIES_WEEKLY_ADJUSTED)
-#ValidateWeeklyTimeSeries(d['Meta Data'],vars_file.Meta_Data_keys)
-#ValidateTimeSeries(d['Weekly Adjusted Time Series'],vars_file.TimeData)
-#ValidateTimeSeriesDataNotNone(d['Weekly Adjusted Time Series'], vars_file.TimeData)
