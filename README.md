@@ -5,8 +5,11 @@
 
  	I have picked one task from https://github.com/toddmotto/public-apis
 
-	API Tested for Below time-series
+	API Tested for Below time-series project
 	https://www.alphavantage.co/documentation/#time-series-data
+
+	## Tested API
+	https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=MSFT&apikey=demo
 
 These api test are writen using python behave "which is a BDD test framework"
 [Refrence]: https://behave.readthedocs.io/en/latest/
