@@ -179,6 +179,11 @@ A step by step series of examples that tell you how to get a development env run
 
 
 ## Sample Test run Using Docker:
+	
+	docker run --name apirun1 --rm  apitest123456
+	[This display the testrun logs in console and remove the container]
+
+			or
 
 	docker run --name apirun7 -d apitest123456
 	4895ffce17f4af4f55fb4014e414352d9d27c5d34baac74ecf5365bb0d339426
