@@ -1,0 +1,12 @@
+allure-behave
+allure-python-commons
+attrs
+behave
+enum34
+linecache2
+parse
+parse-type
+pluggy
+setuptools
+six
+traceback2
