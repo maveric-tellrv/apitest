@@ -31,29 +31,26 @@ What things you need to install the software and how to install them
 
 Clone the project and you will get below directory list
 
--- apitest
-    |-- README.md
-    |-- __pycache__
-    |   |-- mock_data.cpython-34.pyc
-    |   `-- vars_file.cpython-34.pyc
-    |-- features
-    |   |-- apitest
-    |   |   |-- test.feature
-    |   |   `-- test2.feature
-    |   |-- png
-    |   |   |-- Screenshot\ from\ 2018-07-28\ 21-19-56.png
-    |   |   |-- Screenshot\ from\ 2018-07-28\ 21-20-08.png
-    |   |   `-- Screenshot\ from\ 2018-07-28\ 21-20-19.png
-    |   `-- steps
-    |       |-- mock_data.py
-    |       |-- mock_data.pyc
-    |       |-- rest_client.py
-    |       |-- vars_file.py
-    |       `-- vars_file.pyc
-    |-- requirement.txt
-    `-- sample_result.txt
+ apitest
+     README.md
+     features
+     	apitest
+     		test.feature
+     		test2.feature
+     	png
+     		Screenshot\ from\ 2018-07-28\ 21-19-56.png
+     		Screenshot\ from\ 2018-07-28\ 21-20-08.png
+     		Screenshot\ from\ 2018-07-28\ 21-20-19.png
+     	steps
+    		mock_data.py
+    		mock_data.pyc
+    		rest_client.py
+    		vars_file.py
+    		vars_file.pyc
+    requirement.txt
+    sample_result.txt
 
-6 directories, 15 files
+	6 directories, 15 files
 
 
 
@@ -72,11 +69,11 @@ root@c96ced1009c9 apitest]# behave features/apitest/test2.feature
 
 
 ### Test Output in BDD format 
-
-[root@c96ced1009c9 apitest]# behave features/apitest/test2.feature 
+"""
+root@c96ced1009c9 apitest]# behave features/apitest/test2.feature 
 Feature: Test API Response for www.alphavantage.co # features/apitest/test2.feature:1
 
-  @rest_client
+  rest_client
   Scenario: Check Api status code 200 with mandatory parameters                                                   # features/apitest/test2.feature:4
     Given The Url for the API                                                                                     # features/steps/rest_client.py:7 0.002s
       """
@@ -101,7 +98,7 @@ Feature: Test API Response for www.alphavantage.co # features/apitest/test2.feat
     And I match the response metadata keys "TIME_SERIES_WEEKLY_ADJUSTED"                                          # features/steps/rest_client.py:73 0.000s
     And response body should be valid and non empty                                
 
-
+"""
 ## Authors
 
 * **Rohit Vyas** - *Initial work*
