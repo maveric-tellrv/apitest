@@ -12,6 +12,29 @@ These api test are writen using python behave "which is a BDD test framework"
 [Refrence]: https://behave.readthedocs.io/en/latest/
 
 
+# What all is tested [Test Scenario]
+
+Basically I have automated the test to check following conditions:
+1. like response code [200 / 400 and 500]
+	observed that these api does not return 400 error even if user dont pass manadatory params.
+2. This api already have a problem for perfomance i.e  server response  fails if API is consumed very often with less time gap
+3. This api test also check ths response data format for only JSON  [I have not added the test to validate the csv format]
+4. Api meta data valdation test check the valida response
+5. Validation to check the response of history data with mock data 
+6. Validated the keys reutned in api responses for each metadata
+
+The Scenario file looks like below and is self explanatory
+
+	Given The Url for the API
+    	When I check response for the endpoint function "TIME_SERIES_WEEKLY_ADJUSTED" and "MSFT" with "Valid" APIKeys
+    	Then response should be "200"
+    	And I match the response metadata keys "TIME_SERIES_WEEKLY_ADJUSTED"
+    	And response body should be valid and non empty
+    	And Test data validation should pass
+    	And Recent and oldest datapoints returns valid value
+    	And I validate the respose data keys for function "Meta Data"
+    	And I validate the respose data keys for function "Weekly Adjusted Time Series"
+
 ## screnshot png folder
 	I have attached a screen shot of each test run 
         png
