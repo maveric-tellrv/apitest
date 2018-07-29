@@ -1,15 +1,16 @@
 
 #  Project Title: Relayr [Task2]
 
-##API Test fo Relayr Test Assignment [Task 2]
+## API Test fo Relayr Test Assignment [Task 2]
 
- I have picked one task from https://github.com/toddmotto/public-apis
+ 	I have picked one task from https://github.com/toddmotto/public-apis
 
-API Tested for Below time-series
-https://www.alphavantage.co/documentation/#time-series-data
+	API Tested for Below time-series
+	https://www.alphavantage.co/documentation/#time-series-data
 
 These api test are writen using python behave "which is a BDD test framework"
 [Refrence]: https://behave.readthedocs.io/en/latest/
+
 
 ## screnshot png folder
 	I have attached a screen shot of each test run 
@@ -20,10 +21,13 @@ These api test are writen using python behave "which is a BDD test framework"
 
 
 ### Apikeys generated
-API_key=13HOROS7Z6WRX1Q5
+	
+	Api keys are also menstioned in "vars_file"
+ 
+	API_key=13HOROS7Z6WRX1Q5
 
 ## Getting Started
-
+	
 
 ### Prerequisites
 
