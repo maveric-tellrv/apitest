@@ -1,4 +1,4 @@
-centos:7
+FROM centos:7
 MAINTAINER The apitest Project <vyasrohitvyas@gmail.com>
 
 RUN  yum install -y \
@@ -13,4 +13,4 @@ RUN mkdir -p /testapi && cd /testapi && git clone https://github.com/maveric-tel
 RUN pip install -r /testapi/apitest/requirement.txt
 
 
-CMD ["/bin/bash", "-c" ,"cd /testapi/apitest/ && behave features/apitest/test2.feature "]
+CMD ["/bin/bash", "-c" ,"cd /testapi/apitest/ && git pull && behave features/apitest/test2.feature "]
