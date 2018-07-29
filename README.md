@@ -92,7 +92,9 @@ pip install -r requirement.txt
 
 ## Running the tests
 
-root@c96ced1009c9 apitest]# behave features/apitest/test2.feature
+	Run test using behave
+
+	root@c96ced1009c9 apitest]# behave features/apitest/test2.feature
 
 
 
