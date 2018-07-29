@@ -1,8 +1,6 @@
-
-
-
 # This Mock test data for specific date time
 # Add response values which needs to be validated
+
 
 WeeklyAdjustedTimeSeries = { '2018-07-20': {
                              '1. open': "105.4000",

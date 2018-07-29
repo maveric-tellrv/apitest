@@ -1,3 +1,4 @@
+requests
 allure-behave
 allure-python-commons
 attrs
