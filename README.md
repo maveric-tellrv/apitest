@@ -13,7 +13,7 @@
 
 These api test are writen using python behave "which is a BDD test framework"
 [Refrence]: https://behave.readthedocs.io/en/latest/
-
+	Dockerfile to build and run test
 
 # What all is tested [Test Scenario]
 
@@ -96,6 +96,15 @@ A step by step series of examples that tell you how to get a development env run
 	# Please change as per requirement
 	apikey="13HOROS7Z6WRX1Q5"
 
+
+### Build & Run Test using Docker Container:
+	Build the conatiner from Dockerfile:
+	
+	docker build -t apitestContainer . 	
+	docker run --name apiTestRun1 -d apitestContainer
+
+	To view the Logs:
+	docker logs apiTestRun1
 
 
 ## Running the tests
