@@ -128,6 +128,35 @@ root@c96ced1009c9 apitest]# behave features/apitest/test2.feature
     	And response body should be valid and non empty                                
 
 
+
+	 Scenario: Check Api status code 400 with missing mandatory parameters                                          # features/apitest/test2.feature:83
+   	 Given The Url for the API                                                                                    # features/steps/rest_client.py:7 0.000s
+      	"""
+      	Expected to go wrong while processing GET payload, the right status code is 400  
+      	"""
+    	When I check response for the endpoint function "TIME_SERIES_WEEKLY_ADJUSTED" and " " with "InValid" APIKeys # features/steps/rest_client.py:11 1.313s
+    	Then response should be "400"                                                                                # features/steps/rest_client.py:31 0.000s
+     	 Traceback (most recent call last):
+        	File "/usr/lib/python2.7/site-packages/behave/model.py", line 1329, in run
+          	match.run(runner.context)
+        	File "/usr/lib/python2.7/site-packages/behave/matchers.py", line 98, in run
+          	self.func(context, *args, **kwargs)
+        	File "features/steps/rest_client.py", line 33, in step_impl
+          	assert response_code == str(context.status)
+      	AssertionError
+
+
+
+	Failing scenarios:
+  	features/apitest/test2.feature:75  Check Api status code 400 with mandatory parameters with invalid API KEYS
+  	features/apitest/test2.feature:83  Check Api status code 400 with missing mandatory parameters
+
+	0 features passed, 1 failed, 0 skipped
+	6 scenarios passed, 2 failed, 0 skipped
+	36 steps passed, 2 failed, 0 skipped, 0 undefined
+	Took 0m41.260s
+
+
 ## Authors
 
 * **Rohit Vyas** - *Initial work*
