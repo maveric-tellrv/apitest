@@ -39,7 +39,7 @@ The Scenario file looks like below and is self explanatory
     	And I validate the respose data keys for function "Meta Data"
     	And I validate the respose data keys for function "Weekly Adjusted Time Series"
 
-## screnshot png folder
+## screanshot png folder
 	I have attached a screen shot of each test run 
         png
          Screenshot\ from\ 2018-07-28\ 21-19-56.png
