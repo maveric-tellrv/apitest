@@ -96,37 +96,38 @@ root@c96ced1009c9 apitest]# behave features/apitest/test2.feature
 
 
 
-### Test Output in BDD format 
-"""
-root@c96ced1009c9 apitest]# behave features/apitest/test2.feature 
-Feature: Test API Response for www.alphavantage.co # features/apitest/test2.feature:1
+## Test Output in BDD format 
 
-  rest_client
-  Scenario: Check Api status code 200 with mandatory parameters                                                   # features/apitest/test2.feature:4
-    Given The Url for the API                                                                                     # features/steps/rest_client.py:7 0.002s
-      """
-      200 implies that the response contains a payload that represents the status of the requested resource
-      """
-    When I check response for the endpoint function "TIME_SERIES_WEEKLY_ADJUSTED" and "MSFT" with "Valid" APIKeys # features/steps/rest_client.py:11 7.301s
-    Then response should be "200"                                                                                 # features/steps/rest_client.py:31 0.001s
-    And I match the response metadata keys "TIME_SERIES_WEEKLY_ADJUSTED"                                          # features/steps/rest_client.py:73 0.000s
-    And response body should be valid and non empty                                                               # features/steps/rest_client.py:35 0.000s
-    And Test data validation should pass                                                                          # features/steps/rest_client.py:174 0.000s
-    And Recent and oldest datapoints returns valid value                                                          # features/steps/rest_client.py:123 0.035s
-    And I validate the respose data keys for function "Meta Data"                                                 # features/steps/rest_client.py:87 0.000s
-    And I validate the respose data keys for function "Weekly Adjusted Time Series"                               # features/steps/rest_client.py:87 0.000s
 
-  Scenario: Check response body is valid                                                                          # features/apitest/test2.feature:21
-    Given The Url for the API                                                                                     # features/steps/rest_client.py:7 0.000s
-      """
-      This test test for valid non empty response body
-      """
-    When I check response for the endpoint function "TIME_SERIES_WEEKLY_ADJUSTED" and "MSFT" with "Valid" APIKeys # features/steps/rest_client.py:11 4.299s
-    Then response should be "200"                                                                                 # features/steps/rest_client.py:31 0.000s
-    And I match the response metadata keys "TIME_SERIES_WEEKLY_ADJUSTED"                                          # features/steps/rest_client.py:73 0.000s
-    And response body should be valid and non empty                                
+	root@c96ced1009c9 apitest]# behave features/apitest/test2.feature 
+	Feature: Test API Response for www.alphavantage.co # features/apitest/test2.feature:1
 
-"""
+	  rest_client
+  	  Scenario: Check Api status code 200 with mandatory parameters                                                   # features/apitest/test2.feature:4
+    		Given The Url for the API                                                                                     # features/steps/rest_client.py:7 0.002s
+      		"""
+      		200 implies that the response contains a payload that represents the status of the requested resource
+      		"""
+    		When I check response for the endpoint function "TIME_SERIES_WEEKLY_ADJUSTED" and "MSFT" with "Valid" APIKeys # features/steps/rest_client.py:11 7.301s
+    		Then response should be "200"                                                                                 # features/steps/rest_client.py:31 0.001s
+    		And I match the response metadata keys "TIME_SERIES_WEEKLY_ADJUSTED"                                          # features/steps/rest_client.py:73 0.000s
+    		And response body should be valid and non empty                                                               # features/steps/rest_client.py:35 0.000s
+    		And Test data validation should pass                                                                          # features/steps/rest_client.py:174 0.000s
+    		And Recent and oldest datapoints returns valid value                                                          # features/steps/rest_client.py:123 0.035s
+    		And I validate the respose data keys for function "Meta Data"                                                 # features/steps/rest_client.py:87 0.000s
+    		And I validate the respose data keys for function "Weekly Adjusted Time Series"                               # features/steps/rest_client.py:87 0.000s
+
+  	Scenario: Check response body is valid                                                                          # features/apitest/test2.feature:21
+  	  Given The Url for the API                                                                                     # features/steps/rest_client.py:7 0.000s
+      	"""
+      	This test test for valid non empty response body
+      	"""
+    	When I check response for the endpoint function "TIME_SERIES_WEEKLY_ADJUSTED" and "MSFT" with "Valid" APIKeys # features/steps/rest_client.py:11 4.299s
+    	Then response should be "200"                                                                                 # features/steps/rest_client.py:31 0.000s
+    	And I match the response metadata keys "TIME_SERIES_WEEKLY_ADJUSTED"                                          # features/steps/rest_client.py:73 0.000s
+    	And response body should be valid and non empty                                
+
+
 ## Authors
 
 * **Rohit Vyas** - *Initial work*
