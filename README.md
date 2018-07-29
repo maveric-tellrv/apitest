@@ -11,6 +11,13 @@ https://www.alphavantage.co/documentation/#time-series-data
 These api test are writen using python behave "which is a BDD test framework"
 [Refrence]: https://behave.readthedocs.io/en/latest/
 
+## screnshot png folder
+	I have attached a screen shot of each test run 
+        png
+         Screenshot\ from\ 2018-07-28\ 21-19-56.png
+         Screenshot\ from\ 2018-07-28\ 21-20-08.png
+         Screenshot\ from\ 2018-07-28\ 21-20-19.png
+
 
 ### Apikeys generated
 API_key=13HOROS7Z6WRX1Q5
