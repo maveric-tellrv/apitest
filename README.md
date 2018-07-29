@@ -31,28 +31,26 @@ What things you need to install the software and how to install them
 
 Clone the project and you will get below directory list
 
- apitest
-     README.md
-     features
-     	apitest
-     		test.feature
-     		test2.feature
-     	png
-     		Screenshot\ from\ 2018-07-28\ 21-19-56.png
-     		Screenshot\ from\ 2018-07-28\ 21-20-08.png
-     		Screenshot\ from\ 2018-07-28\ 21-20-19.png
-     	steps
-    		mock_data.py
-    		mock_data.pyc
-    		rest_client.py
-    		vars_file.py
-    		vars_file.pyc
-    requirement.txt
-    sample_result.txt
+ 	apitest
+     	README.md
+     	features
+     		apitest
+     			test.feature
+     			test2.feature
+     		png
+     			Screenshot\ from\ 2018-07-28\ 21-19-56.png
+     			Screenshot\ from\ 2018-07-28\ 21-20-08.png
+     			Screenshot\ from\ 2018-07-28\ 21-20-19.png
+     		steps
+    			mock_data.py
+    			mock_data.pyc
+    			rest_client.py
+    			vars_file.py
+    			vars_file.pyc
+   			requirement.txt
+    			sample_result.txt
 
 	6 directories, 15 files
-
-
 
 
 ### Installing
