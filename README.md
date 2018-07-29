@@ -178,6 +178,29 @@ A step by step series of examples that tell you how to get a development env run
 	Took 0m41.260s
 
 
+## Sample Test run Using Docker:
+
+	docker run --name apirun7 -d apitest123456
+	4895ffce17f4af4f55fb4014e414352d9d27c5d34baac74ecf5365bb0d339426
+
+ 	⚡ rovyas@rovyas  /tmp/dockerrun  docker logs apirun7   
+                    
+	Feature: Test API Response for www.alphavantage.co # features/apitest/test2.feature:1
+  		@rest_client
+  		Scenario: Check Api status code 200 with mandatory parameters                                                   # features/apitest/test2.feature:4
+    		Given The Url for the API                                                                                     # features/steps/rest_client.py:7
+      		"""
+      		200 implies that the response contains a payload that represents the status of the requested resource
+      		"""
+    		When I check response for the endpoint function "TIME_SERIES_WEEKLY_ADJUSTED" and "MSFT" with "Valid" APIKeys # features/steps/rest_client.py:11
+    		Then response should be "200"                                                                                 # features/steps/rest_client.py:31
+    		And I match the response metadata keys "TIME_SERIES_WEEKLY_ADJUSTED"                                          # features/steps/rest_client.py:73
+    		And response body should be valid and non empty                                                               # features/steps/rest_client.py:35
+    		And Test data validation should pass                                                                          # features/steps/rest_client.py:174
+    		And Recent and oldest datapoints returns valid value                                                          # features/steps/rest_client.py:123
+    		And I validate the respose data keys for function "Meta Data"                                                 # features/steps/rest_client.py:87
+    		And I validate the respose data keys for function "Weekly Adjusted Time Series"                               # features/steps/rest_client.py:87
+
 ## Authors
 
 * **Rohit Vyas** - *Initial work*
