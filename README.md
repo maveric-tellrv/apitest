@@ -1,7 +1,7 @@
 
-#  Project Title: Relayr [Task2]
+#  Project Title: Sample API Test [Task2]
 
-## API Test for Relayr Test Assignment [Task 2]
+## API Test for Sample Assignment [Task 2]
 
  	I have picked one task from https://github.com/toddmotto/public-apis
 
